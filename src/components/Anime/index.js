@@ -249,7 +249,7 @@ class Anime extends Component {
                   />
                   <input
                     type="text"
-                    placeHolder="Search series..."
+                    placeholder="Search series..."
                     value={animeSearchInput}
                     onChange={this.updateInput}
                     className="searchBox"
