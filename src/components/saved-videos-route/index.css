@@ -1,0 +1,452 @@
+.empty-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 80vh;
+  flex-direction: column;
+}
+
+.empty-image {
+  width: 100%;
+  height: 400px;
+}
+
+.dark {
+  background-color: #2b2929;
+  border: none;
+}
+
+.li {
+  position: relative;
+}
+
+.delete-indivisual-movie-icon {
+  position: absolute;
+  z-index: 100;
+  margin: 15px 10px;
+  color: white;
+}
+
+.delete-indivisual-movie-button {
+  position: absolute;
+  margin: 18px 10px;
+  color: black;
+  z-index: 100;
+  background-color: white;
+  border: none;
+  border-radius: 3px;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.5);
+  padding: 4px 14px;
+  font-family: 12px;
+  cursor: pointer;
+}
+
+.main-container {
+  font-family: 'Poppins';
+}
+
+.search-and-delete-container {
+  position: sticky;
+  top: 0px;
+  z-index: 100;
+  padding: 15px 22px;
+  background-color: white;
+  padding-right: 20px;
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.saved-videos-search-bar {
+  width: 80%;
+  border: none;
+  border-radius: 4px;
+  padding: 15px 20px;
+  font-size: 16px;
+  height: 35px;
+  background-color: #ffffff;
+  color: #555353;
+  box-shadow: 0 0 8px rgba(66, 65, 65, 0.2);
+  transition: all 0.3s ease;
+  outline: none;
+  font-family: 'Poppins', sans-serif;
+}
+
+.saved-videos-search-bar::placeholder {
+  color: #908e8e;
+}
+
+.saved-videos-search-bar:focus {
+  box-shadow: 0 0 12px rgba(255, 0, 128, 0.5);
+}
+
+.delete-all-container {
+  display: flex;
+  justify-content: center;
+  width: 10%;
+}
+.delete-all-button {
+  font-size: 15px;
+  padding: 8px 17px;
+  border: none;
+  border-radius: 5px;
+  background-image: linear-gradient(
+    135deg,
+    #ff416c,
+    #ff4b2b,
+    #ff0844,
+    #ff2a68,
+    #e10050,
+    #c31432
+  );
+  background-size: 200% 200%;
+  animation: floatBg 4s ease-in-out infinite;
+
+  font-family: 'Poppins';
+  box-shadow: 0 0 5px rgba(98, 97, 97, 0.3);
+  width: 100%;
+  transition: all 0.4s ease;
+  cursor: pointer;
+  color: white;
+
+  background-position: left;
+}
+
+@keyframes floatBg {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.delete-all-button:hover {
+  background-color: rgb(247, 75, 106);
+  transform: scale(1.05);
+}
+
+.searchbox-container {
+  display: flex;
+  justify-content: flex-start;
+  width: 50%;
+}
+
+.delete-button {
+  z-index: 100;
+}
+
+.saved-videos-container {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+}
+
+.saved-video-content-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 20px 0;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.97)
+  );
+  height: 100vh;
+  border-radius: 10px;
+  opacity: 0;
+  transition: all 0.4s ease;
+  width: 100%;
+  border: none;
+}
+
+.saved-video-content-container2 {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: column;
+  padding: 20px 20px;
+  background-image: linear-gradient(
+    to right,
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.2),
+    rgba(0, 0, 0, 0.3),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.6),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.9),
+    rgba(8, 8, 8, 0.97)
+  );
+
+  border-radius: 10px;
+  opacity: 1;
+  transition: all 0.4s ease;
+  width: 100%;
+  border: none;
+}
+
+.saved-video-content-container:hover {
+  opacity: 1;
+  padding: 20px 20px;
+  border: none;
+}
+
+.sv-title {
+  font-size: 16px;
+}
+
+.sneak-peek-container {
+  background-size: 100%;
+  overflow: hidden;
+  transition: transform 0.4s ease-in-out;
+
+  box-shadow: 0 10px 10px rgba(0, 0, 0, 0.9);
+}
+
+.sneak-peek-container:hover {
+  animation: sneak-hover 1.2s ease-in-out forwards;
+  cursor: pointer;
+  transition: all 2s ease;
+}
+
+@keyframes sneak-hover {
+  0% {
+    background-size: 110%;
+    background-position: 40% 60%;
+  }
+
+  50% {
+    background-size: 115%;
+    background-position: 60% 40%;
+  }
+
+  100% {
+    background-size: 120%;
+    background-position: center;
+  }
+}
+
+.show-hide-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: none;
+  padding-bottom: 20px;
+}
+
+.hr {
+  width: 90%;
+  border: none;
+  margin: 0 30px;
+}
+
+hr {
+  border: 1px solid rgb(172, 170, 170);
+}
+
+.add-button {
+  padding: 8px 12px;
+  font-size: 15px;
+  background-color: #ff324e; /* Dodger Blue */
+  color: #ffffff;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.5s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 150px;
+}
+
+.add-button:hover {
+  background-color: #ff1741; /* Slightly darker */
+  transform: translateY(-2px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.7);
+}
+
+.add-button:active {
+  transform: scale(0.98);
+}
+.show-button {
+  padding: 8px 12px;
+  font-size: 15px;
+  background-color: #e8eaec; /* Dodger Blue */
+  color: #000000;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  transition:
+    background-color 0.3s ease,
+    transform 0.2s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.5);
+  width: 150px;
+}
+
+.show-button:hover {
+  background-color: #feffff; /* Slightly darker */
+  transform: translateY(-2px);
+}
+
+.show-button:active {
+  transform: scale(0.98);
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .saved-videos-container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .saved-videos-container {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .delete-all-button {
+    font-size: 15px;
+    padding: 8px 17px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      135deg,
+      #ff416c,
+      #ff4b2b,
+      #ff0844,
+      #ff2a68,
+      #e10050,
+      #c31432
+    );
+    background-size: 200% 200%;
+    animation: floatBg 4s ease-in-out infinite;
+
+    font-family: 'Poppins';
+    box-shadow: 0 0 5px rgba(98, 97, 97, 0.3);
+    width: 150px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: white;
+
+    background-position: left;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .saved-videos-container {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .saved-video-content-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-end;
+    flex-direction: column;
+    padding: 0 20px;
+    background-image: linear-gradient(
+      to right,
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.2),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.97)
+    );
+    height: 100%;
+    border-radius: 10px;
+    opacity: 1;
+  }
+
+  .sv-title {
+    font-size: 20px;
+  }
+  .empty-image {
+    width: 100%;
+    height: 300px;
+  }
+
+  .search-and-delete-container {
+    position: sticky;
+    top: 0px;
+    z-index: 100;
+    padding: 15px 0;
+    background-color: white;
+
+    margin-top: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
+  .searchbox-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+
+  .search-and-delete-container {
+    justify-content: space-between;
+    margin-left: 30px;
+  }
+
+  .delete-all-container {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+  .delete-all-button {
+    font-size: 15px;
+    padding: 8px 17px;
+    border: none;
+    border-radius: 5px;
+    background-image: linear-gradient(
+      135deg,
+      #ff416c,
+      #ff4b2b,
+      #ff0844,
+      #ff2a68,
+      #e10050,
+      #c31432
+    );
+    background-size: 200% 200%;
+    animation: floatBg 4s ease-in-out infinite;
+
+    font-family: 'Poppins';
+    box-shadow: 0 0 5px rgba(98, 97, 97, 0.3);
+    width: 150px;
+    transition: all 0.4s ease;
+    cursor: pointer;
+    color: white;
+
+    background-position: left;
+  }
+  .saved-videos-search-bar {
+    width: 100%;
+    border: none;
+    border-radius: 4px;
+    padding: 15px 50px;
+    font-size: 16px;
+    height: 35px;
+    background-color: #ffffff;
+    color: #555353;
+    box-shadow: 0 0 8px rgba(66, 65, 65, 0.2);
+    transition: all 0.3s ease;
+    outline: none;
+    font-family: 'Poppins', sans-serif;
+  }
+}

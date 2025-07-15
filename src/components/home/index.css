@@ -1,0 +1,211 @@
+.home-page {
+  height: 300vh;
+  padding: 20px;
+  font-family: 'Poppins', sans-serif;
+}
+
+/* Show arrows and make them visible */
+.slick-prev,
+.slick-next {
+  z-index: 10;
+  width: 40px;
+  height: 40px;
+  background-color: rgba(255, 255, 255, 0.5);
+  border-radius: 50%;
+}
+
+.slick-prev:hover,
+.slick-next:hover {
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+/* Position the arrows */
+.slick-prev {
+  left: -10px;
+}
+.slick-next {
+  right: -10px;
+}
+
+/* Customize arrow icons (optional) */
+.slick-prev::before,
+.slick-next::before {
+  color: black;
+  font-size: 24px;
+}
+
+.carousel-container {
+  display: flex;
+  width: 1000vw;
+}
+
+.carousel-overflow-handler-container {
+  width: 100%;
+  overflow-x: hidden;
+}
+
+.slider-wrapper {
+  width: 100%;
+}
+.poster-img {
+  height: 50vh;
+  width: 240px;
+  border-radius: 20px;
+}
+
+.poster-card {
+  position: relative;
+}
+
+.poster-card-content {
+  position: absolute;
+  top: 0%;
+
+  height: 50vh;
+  display: flex;
+  justify-content: flex-end;
+  align-items: flex-start;
+  flex-direction: column;
+  color: white;
+  width: 240px;
+  background-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0),
+    rgba(0, 0, 0, 0.1),
+    rgba(0, 0, 0, 0.4),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.8),
+    rgba(0, 0, 0, 0.9),
+    rgba(0, 0, 0, 0.97)
+  );
+  padding: 10px 20px;
+  border-radius: 20px;
+  font-weight: bold;
+  opacity: 0;
+  transition: all 0.4s ease;
+}
+
+.poster-card:hover .poster-card-content {
+  opacity: 1;
+  padding: 20px;
+}
+
+.colorful-reddish-button {
+  background: linear-gradient(
+    120deg,
+    #6c020b,
+    #de1021,
+    #b10d1a,
+    #60120a,
+    #7a0606
+  );
+  background-size: 300% 300%;
+  color: #fff;
+  width: 100%;
+  padding: 12px 28px;
+  border: none;
+  border-radius: 10px;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 1px;
+  cursor: pointer;
+  transition: transform 0.3s ease;
+  box-shadow: 0 6px 16px rgba(178, 10, 30, 0.5);
+  font-family: 'Poppins', sans-serif;
+  animation: flowing-gradient 6s ease infinite;
+}
+
+@keyframes flowing-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.colorful-reddish-button:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 20px rgba(178, 10, 30, 0.7);
+  background-position: right;
+}
+
+.trending-text {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+@media screen and (min-width: 576px) and (max-width: 768px) {
+  .carousel-container {
+    width: 5000vw;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 992px) {
+  .carousel-container {
+    width: 1500vw;
+  }
+}
+
+@media screen and (max-width: 576px) {
+  .carousel-container {
+    width: 3000vw;
+  }
+
+  .poster-img {
+    height: 50vh;
+    width: 100%;
+    border-radius: 20px;
+    box-shadow: 0 7px 10px rgba(0, 0, 0, 0.8);
+  }
+
+  .poster-card {
+    padding: 10px;
+  }
+
+  .poster-card-content {
+    position: absolute;
+    top: 41%;
+    opacity: 1;
+    height: 30vh;
+    display: flex;
+    justify-content: flex-end;
+    align-items: flex-start;
+    flex-direction: column;
+    color: white;
+    width: 94%;
+    background-image: linear-gradient(
+      to bottom,
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0),
+      rgba(0, 0, 0, 0.1),
+      rgba(0, 0, 0, 0.4),
+      rgba(0, 0, 0, 0.6),
+      rgba(0, 0, 0, 0.8),
+      rgba(0, 0, 0, 0.9),
+      rgba(0, 0, 0, 0.97)
+    );
+    padding: 20px 20px;
+    border-radius: 20px;
+
+    font-weight: bold;
+  }
+
+  .trending-content-text {
+    font-size: 20px;
+  }
+
+  .trending-text {
+    padding: 0 10px;
+    height: 80px;
+  }
+
+  .view-all-button {
+    font-size: 25px;
+  }
+}

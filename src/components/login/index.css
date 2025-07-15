@@ -1,0 +1,247 @@
+.login-container2 {
+  height: 80vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+
+  font-family: 'Poppins', sans-serif;
+}
+
+.logo-container {
+  text-align: center;
+  margin-bottom: 30px;
+}
+
+.logo {
+  width: 80%;
+  height: 40px;
+}
+
+.name-field {
+  margin-bottom: 20px;
+}
+
+.label-name {
+  color: rgb(57, 57, 57);
+  font-size: 16px;
+  margin-bottom: 20px;
+}
+
+.name-input {
+  margin-top: 10px;
+  padding: 9px;
+  padding-left: 10px;
+  font-size: 15px;
+  color: rgb(79, 79, 79);
+  border: none;
+  border-radius: 5px;
+  background-color: rgb(231, 232, 238);
+}
+.name-input:focus {
+  outline: none;
+}
+
+.login-button-container {
+  margin-top: 40px;
+}
+
+.login-button {
+  background-color: #4a90e2; /* Blue background */
+  color: #fff; /* White text */
+  border: none;
+  padding: 6px 12px;
+  font-size: 16px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  font-family: 'Poppins', sans-serif;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+  width: 100%;
+}
+
+.login-button:hover {
+  background-color: #357abd; /* Darker blue on hover */
+  transform: translateY(-2px); /* Slight pop-up effect */
+  box-shadow: 0 6px 14px rgba(0, 0, 0, 0.15);
+}
+
+.show-passowrd-container {
+  margin-top: 20px;
+}
+
+.custom-checkbox {
+  display: inline-flex;
+  align-items: center;
+  cursor: pointer;
+  font-family: 'Poppins', sans-serif;
+  font-size: 16px;
+  user-select: none;
+  position: relative;
+}
+
+.custom-checkbox input {
+  display: none;
+}
+
+.custom-checkbox .checkmark {
+  height: 20px;
+  width: 20px;
+  background-color: #eee;
+  border: 2px solid #ccc;
+  border-radius: 4px;
+  margin-right: 10px;
+  position: relative;
+  transition: all 0.2s ease;
+}
+
+.custom-checkbox input:checked + .checkmark {
+  background-color: #4a90e2;
+  border-color: #4a90e2;
+}
+
+.custom-checkbox .checkmark::after {
+  content: '';
+  position: absolute;
+  display: none;
+}
+
+.custom-checkbox input:checked + .checkmark::after {
+  display: block;
+  left: 5px;
+  top: 1px;
+  width: 5px;
+  height: 10px;
+  border: solid white;
+  border-width: 0 2px 2px 0;
+  transform: rotate(45deg);
+}
+
+.login-page {
+  box-shadow:
+    8px 8px 16px rgba(0, 0, 0, 0.1),
+    -8px -8px 16px rgba(255, 255, 255, 0.7);
+  border-radius: 20px;
+  padding: 40px;
+}
+
+.error-message {
+  transition: all 0.4s;
+  opacity: 0;
+  color: rgb(242, 66, 66);
+  animation: blink 1s infinite alternate;
+}
+
+@keyframes blink {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.checkbox {
+  margin-top: 20px;
+  margin-right: 6px;
+}
+
+@media screen and (max-width: 991px) {
+  .login-container2 {
+    height: 80vh;
+  }
+  .login-container {
+    display: block;
+  }
+  .main-login-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+
+    padding: 30px;
+    height: 100vh;
+  }
+
+  .big-login-image {
+    width: 100%;
+    height: 250px;
+    border-radius: 30px;
+  }
+}
+
+@media screen and (min-width: 992px) {
+  .main-login-container {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+
+    padding: 30px;
+    height: 100vh;
+  }
+
+  .login-container2 {
+    height: 80vh;
+    display: none;
+  }
+  .login-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+
+    font-family: 'Poppins', sans-serif;
+  }
+
+  .big-login-image {
+    width: 100%;
+    height: 550px;
+    border-radius: 30px;
+  }
+  .login-container {
+    height: 100vh;
+  }
+  .logo-container {
+    margin-bottom: 30px;
+  }
+
+  .login-page {
+    padding: 50px;
+  }
+
+  .logo {
+    width: 100%;
+    height: 60px;
+  }
+
+  .label-name {
+    color: rgb(57, 57, 57);
+    font-size: 20px;
+    margin-bottom: 40px;
+  }
+
+  .name-input {
+    margin-top: 20px;
+    padding: 9px;
+    padding-left: 10px;
+    font-size: 20px;
+    color: rgb(79, 79, 79);
+    border: none;
+    border-radius: 5px;
+    background-color: rgb(231, 232, 238);
+  }
+
+  .name-field {
+    margin-bottom: 30px;
+  }
+
+  .show-passowrd-container {
+    margin-top: 20px;
+    margin-bottom: 20px;
+  }
+
+  .login-button {
+    padding: 10px 12px;
+    font-size: 20px;
+  }
+}
