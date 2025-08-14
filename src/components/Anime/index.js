@@ -90,7 +90,7 @@ class Anime extends Component {
   getAllTrendingMovies = async () => {
     const {currentPage} = this.state
     try {
-      const url = `https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${currentPage}&with_genres=16`
+      const url = `https://thingproxy-760k.onrender.com/fetch/https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${currentPage}&with_genres=16`
       const options = {
         method: 'GET',
       }
