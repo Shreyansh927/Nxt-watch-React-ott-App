@@ -89,7 +89,7 @@ class Login extends Component {
                     <input
                       type="text"
                       id="username"
-                      placeholder="rahul"
+                      placeholder="rahul..."
                       className="name-input"
                       value={username}
                       onChange={this.changeName}
@@ -105,7 +105,7 @@ class Login extends Component {
                     <input
                       type={isPassordVisible ? 'text' : 'password'}
                       id="password"
-                      placeholder="rahul@2021"
+                      placeholder="rahul@2021..."
                       className="name-input"
                       value={password}
                       onChange={this.changePassword}
