@@ -31,8 +31,7 @@ class Home extends Component {
 
   getTrendingMoviesData = async () => {
     const {randomPage} = this.state
-    const apiUrl = `https://thingproxy-760k.onrender.com/fetch/
-https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}`
+    const apiUrl = `https://thingproxy-760k.onrender.com/fetch/https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}`
     try {
       const response = await fetch(apiUrl)
       const jsonData = await response.json()
@@ -54,7 +53,7 @@ https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a00
 
   getTrendingDocumentaryData = async () => {
     const {randomPage} = this.state
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}&with_genres=99`
+    const apiUrl = `https://thingproxy-760k.onrender.com/fetch/https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}&with_genres=99`
     try {
       const response = await fetch(apiUrl)
       const jsonData = await response.json()
@@ -76,7 +75,7 @@ https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a00
 
   getTrendingAnimeData = async () => {
     const {randomPage} = this.state
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}&with_genres=16`
+    const apiUrl = `https://thingproxy-760k.onrender.com/fetch/https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}&with_genres=16`
     try {
       const response = await fetch(apiUrl)
       const jsonData = await response.json()
@@ -98,7 +97,7 @@ https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a00
 
   getTrendingTvData = async () => {
     const {randomPage} = this.state
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}&with_genres=10770`
+    const apiUrl = `https://thingproxy-760k.onrender.com/fetch/https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}&with_genres=10770`
     try {
       const response = await fetch(apiUrl)
       const jsonData = await response.json()
