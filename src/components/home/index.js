@@ -31,7 +31,8 @@ class Home extends Component {
 
   getTrendingMoviesData = async () => {
     const {randomPage} = this.state
-    const apiUrl = `https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}`
+    const apiUrl = `https://thingproxy-760k.onrender.com/fetch/
+https://api.themoviedb.org/3/discover/movie?api_key=04c35731a5ee918f014970082a0088b1&page=${randomPage}`
     try {
       const response = await fetch(apiUrl)
       const jsonData = await response.json()
