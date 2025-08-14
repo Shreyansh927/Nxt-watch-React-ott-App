@@ -51,7 +51,7 @@ class Trending extends Component {
     const endpoint = isSearch ? 'search/movie' : 'discover/movie'
 
     try {
-      const url = `https://api.themoviedb.org/3/${endpoint}?api_key=04c35731a5ee918f014970082a0088b1&page=${currentPage}&query=${input}&with_genres=${currentGenre}`
+      const url = `https://thingproxy-760k.onrender.com/fetch/https://api.themoviedb.org/3/${endpoint}?api_key=04c35731a5ee918f014970082a0088b1&page=${currentPage}&query=${input}&with_genres=${currentGenre}`
 
       const options = {method: 'GET'}
       const response = await fetch(url, options)
