@@ -1,8 +1,9 @@
 [build]
-  command = "npm run build"
+  command = "npm install --legacy-peer-deps && npm run build"
   publish = "build"
 
 
+
 [build.environment]
-  NODE_VERSION = "18.18.0"
+  NODE_VERSION = "18"
   NODE_OPTIONS = "--openssl-legacy-provider"
