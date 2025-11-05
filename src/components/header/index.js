@@ -41,9 +41,8 @@ const navigationList = [
 
 const Header = props => {
   const [activeNav, setActiveNav] = useState('')
-  const {savedVideosList, darkMode, toggleDarkMode} = useContext(
-    SavedVideosContext,
-  )
+  const {savedVideosList, darkMode, toggleDarkMode} =
+    useContext(SavedVideosContext)
 
   const changeNavLink = newLink => {
     setActiveNav(newLink)
@@ -82,38 +81,56 @@ const Header = props => {
             <div className="popup-container">
               <ol>
                 <Link to="/home" className="no-underline">
-                  <li className="home">
+                  <li
+                    className="home"
+                    onClick={() => window.speechSynthesis.cancel()}
+                  >
                     <FaHome className=" m" />
                     <span className="pop-content">Home</span>
                   </li>
                 </Link>
                 <Link to="/trending" className="no-underline">
-                  <li className="trending">
+                  <li
+                    className="trending"
+                    onClick={() => window.speechSynthesis.cancel()}
+                  >
                     <IoMdTrendingUp className=" m" />
                     <span className="pop-content">Trending</span>
                   </li>
                 </Link>
 
                 <Link to="/anime" className="no-underline">
-                  <li className="trending">
+                  <li
+                    className="trending"
+                    onClick={() => window.speechSynthesis.cancel()}
+                  >
                     <IoMdTrendingUp className=" m" />
                     <span className="pop-content">Anime</span>
                   </li>
                 </Link>
                 <Link to="/documentary" className="no-underline">
-                  <li className="trending">
+                  <li
+                    className="trending"
+                    onClick={() => window.speechSynthesis.cancel()}
+                  >
                     <IoMdTrendingUp className=" m" />
                     <span className="pop-content">Documentry</span>
                   </li>
                 </Link>
                 <Link to="/tv" className="no-underline">
-                  <li className="trending">
+                  <li
+                    className="trending"
+                    onClick={() => window.speechSynthesis.cancel()}
+                  >
                     <IoMdTrendingUp className=" m" />
                     <span className="pop-content">TV</span>
                   </li>
                 </Link>
                 <Link to="/saved-videos">
-                  <li className="saved-videos">
+                  <li
+                    className="saved-videos"
+                    onClick={() => window.speechSynthesis.cancel()}
+                  >
                     <FaSave className="m" />
                     <span className="pop-content">Saved </span>
                     <p style={{color: 'red'}}>{savedVideosList.length}</p>
@@ -159,6 +176,7 @@ const Header = props => {
               key={eachNav.navText}
               to={eachNav.link}
               className="no-underline"
+              onClick={() => window.speechSynthesis.cancel()}
             >
               <li
                 className={
